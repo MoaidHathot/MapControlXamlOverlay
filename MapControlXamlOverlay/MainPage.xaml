@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="MapControlXamlOverlay.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MapControlXamlOverlay"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:maps="using:Windows.UI.Xaml.Controls.Maps"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <maps:MapControl x:Name="Map" MapProjection="WebMercator" ZoomLevel="1" />
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <TextBox Text="100" x:Name="ItemCount" />
+            <Button Content="Add Elements" Click="OnClick_Add" />
+            <Button Content="Remove Elements" Click="OnClick_Remove" />
+        </StackPanel>
+    </Grid>
+</Page>
