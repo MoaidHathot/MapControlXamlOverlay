@@ -25,7 +25,7 @@ namespace MapControlXamlOverlay
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private Random _random = new Random();
+        private readonly Random _random = new Random();
 
         public MainPage()
         {
